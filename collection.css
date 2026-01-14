@@ -503,3 +503,33 @@
 .modal-left img:hover {
   transform: scale(1.08);
 }
+
+/* ================= MOBILE HERO OVERRIDE (FINAL) ================= */
+@media (max-width: 768px) {
+
+  .collection-hero {
+    padding: 80px 16px 56px !important;
+    min-height: auto !important;
+    display: block;
+    text-align: center;
+  }
+
+  .collection-hero > div {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 1.9rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    opacity: 0.9;
+  }
+}
