@@ -533,8 +533,42 @@
 }
 
 
+/* === MOBILE CARD SHADOW REDUCTION === */
+@media (max-width: 768px) {
+  .item-card {
+    box-shadow: 0 8px 18px rgba(0,0,0,0.55);
+    transform: none;
+  }
+
+  .item-card:hover {
+    transform: none;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.6);
+  }
+}
 
 
 
+/* === MOBILE TAP TARGET BOOST === */
+@media (max-width: 768px) {
+  .item-card {
+    padding: 20px;
+  }
+
+  .item-title {
+    margin-top: 14px;
+  }
+
+  .item-desc {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+}
 
 
+/* === DISABLE HOVER ZOOM ON TOUCH DEVICES === */
+@media (hover: none) {
+  .item-card:hover img,
+  .modal-left img:hover {
+    transform: none;
+  }
+}
