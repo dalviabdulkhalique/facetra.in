@@ -34,6 +34,22 @@ const waBtn = document.getElementById("waBtn");
 const modalClose = document.getElementById("modalClose");
 
 function openModal(item) {
+  document.getElementById("productSchema").textContent =
+JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": item.title,
+  "image": item.img,
+  "description": item.longDesc || item.desc,
+  "brand": { "@type": "Brand", "name": "FACETRA" },
+  "category": "Diamond",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/InStock"
+  }
+});
+
   modal.classList.add("open");
 
   modalImg.src = item.img;
