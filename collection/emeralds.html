@@ -4,9 +4,33 @@
 <meta charset="UTF-8">
 <title>FACETRA Emeralds Collection | Certified Natural Emeralds</title>
 
+<!-- SEO -->
+<meta name="description" content="Explore FACETRA’s premium collection of certified natural emeralds including Colombian, Zambian and fine green emeralds curated for collectors and fine jewellery.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA’s premium collection of certified natural Emeralds including round, oval, emerald, pear, marquise and fancy color Emeralds.">
-<link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/Emeralds.html">
+<link rel="canonical" href="https://facetra.in/collection/emeralds.html">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="FACETRA Emeralds Collection">
+<meta property="og:description" content="Certified natural emeralds curated for collectors, fine jewellery and long-term investment.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://facetra.in/collection/emeralds.html">
+<meta property="og:image" content="https://res.cloudinary.com/facetra/image/upload/q_auto,f_auto/emerald-colombian-emerald-cut-1.png">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- PERFORMANCE: preload first emeralds -->
+<link rel="preload" as="image"
+  href="https://res.cloudinary.com/facetra/image/upload/q_auto,f_auto/emerald-colombian-emerald-cut-1.png"
+  fetchpriority="high">
+
+<link rel="preload" as="image"
+  href="https://res.cloudinary.com/facetra/image/upload/q_auto,f_auto/emerald-zambian-oval-1.png"
+  fetchpriority="high">
+
+<!-- FAVICONS -->
+<link rel="icon" href="../assets/collection/Favicon/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/collection/Favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#020805">
 
 <!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -15,15 +39,326 @@
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../collection.css">
 
-<!-- SCHEMA -->
+<!-- COLLECTION SCHEMA -->
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@type":"CollectionPage",
- "name":"FACETRA Diamonds Collection",
- "description":"Certified natural diamonds including round brilliant, oval, emerald, pear, marquise and fancy color diamonds.",
- "brand":{"@type":"Brand","name":"FACETRA"}
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"FACETRA Emeralds Collection",
+  "description":"Certified natural emeralds curated for collectors and fine jewellery.",
+  "brand":{"@type":"Brand","name":"FACETRA"}
 }
 </script>
+
+<!-- BREADCRUMBS -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://facetra.in/"},
+    {"@type":"ListItem","position":2,"name":"Collection","item":"https://facetra.in/collection.html"},
+    {"@type":"ListItem","position":3,"name":"Emeralds","item":"https://facetra.in/collection/emeralds.html"}
+  ]
+}
+</script>
+
+<script type="application/ld+json" id="itemListSchema"></script>
+<script type="application/ld+json" id="productSchema"></script>
 </head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="../logo.png" alt="FACETRA Logo">
+      <div>
+        <div class="brand-name">FACETRA</div>
+        <div class="brand-tag">Gems • Diamonds • Stones</div>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../collection.html" class="active">Collection</a>
+      <a href="../certification.html">Certification</a>
+      <a href="../why-facetra.html">Why FACETRA</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a>
+  <a href="../collection.html">Collection</a>
+  <a href="../certification.html">Certification</a>
+  <a href="../why-facetra.html">Why FACETRA</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="collection-hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Emeralds Collection</h1>
+    <p class="hero-description">
+      Hand-selected certified natural emeralds curated for collectors,
+      fine jewellery and long-term investment portfolios.
+    </p>
+  </div>
+</section>
+
+<!-- ================= GRID ================= -->
+<section class="category-page">
+  <div class="items-grid diamonds-grid" id="emeraldGrid"></div>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <div class="modal-left">
+      <img id="modalImg" alt="">
+    </div>
+    <div class="modal-right">
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-actions">
+        <a id="waBtn" class="btn-primary" target="_blank">WhatsApp Enquiry</a>
+        <a href="../contact.html" class="btn-ghost">Contact FACETRA</a>
+      </div>
+    </div>
+    <div class="modal-close" id="modalClose">✕</div>
+  </div>
+</div>
+
+<!-- ================= LUXURY FOOTER ================= -->
+<footer class="lux-footer">
+
+  <div class="footer-inner">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="../logo.png" alt="FACETRA Logo">
+        <span>FACETRA</span>
+      </div>
+      <p>
+        Premium gemstone trading house specializing in certified natural gemstones
+        curated for collectors, jewelers and long-term investors.
+      </p>
+    </div>
+
+<!-- QUICK LINKS -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="../index.html">Home</a>
+      <a href="../collection.html">Collection</a>
+      <a href="../certification.html">Certification</a>
+      <a href="../why-facetra.html">Why FACETRA</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="footer-contact">
+
+      <h4>Contact</h4>
+
+      <!-- EMAIL -->
+      <a class="contact-item" href="mailto:info@facetra.in">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="M3 7l9 6 9-6"/>
+        </svg>
+        <span>info@facetra.in</span>
+      </a>
+
+      <!-- PHONE -->
+      <a class="contact-item" href="tel:+918055113448">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2
+                   19.8 19.8 0 0 1-8.6-3.1
+                   19.5 19.5 0 0 1-6-6
+                   19.8 19.8 0 0 1-3.1-8.7
+                   A2 2 0 0 1 4.1 2h3
+                   a2 2 0 0 1 2 1.7
+                   c.1 1 .3 2 .6 3
+                   a2 2 0 0 1-.4 2.1L8.1 10
+                   a16 16 0 0 0 6 6l1.2-1.2
+                   a2 2 0 0 1 2.1-.4
+                   c1 .3 2 .5 3 .6
+                   a2 2 0 0 1 1.6 1.9z"/>
+        </svg>
+        <span>+91 80551 13448</span>
+      </a>
+
+     <!-- WHATSAPP -->
+<a class="contact-item" href="https://wa.me/918055113448" target="_blank">
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <!-- outer circle -->
+    <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+    <!-- phone -->
+    <path d="M20.6 18.7c-.3-.1-1.9-.9-2.2-1
+      -.3-.1-.5-.1-.7.1l-.9 1.1
+      c-.1.2-.3.2-.6.1
+      -.3-.1-1.2-.4-2.2-1.4
+      -.8-.7-1.4-1.6-1.5-1.9
+      -.1-.3 0-.4.1-.5l.4-.5
+      .3-.4c.1-.2.1-.3 0-.5
+      -.1-.1-.7-1.7-1-2.3
+      -.3-.6-.5-.5-.7-.5h-.6
+      c-.2 0-.5.1-.7.3
+      -.2.2-.9.9-.9 2.1
+      0 1.2.9 2.4 1 2.6
+      .1.2 1.8 2.8 4.3 3.9
+      .6.3 1.1.5 1.5.6
+      .6.2 1.1.2 1.5.1
+      .5-.1 1.9-.8 2.2-1.6
+      .3-.8.3-1.5.2-1.6
+      -.1-.1-.3-.2-.6-.3z"
+      fill="currentColor"/>
+  </svg>
+  <span>WhatsApp Chat</span>
+</a>
+
+
+      <!-- INSTAGRAM -->
+      <a class="contact-item" href="https://instagram.com/facetra.in" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1.2"/>
+        </svg>
+        <span>@facetra.in — DM us on Instagram</span>
+      </a>
+
+      <!-- LOCATION -->
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2C8 2 5 5 5 9
+                   c0 5.3 7 13 7 13
+                   s7-7.7 7-13
+                   c0-4-3-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <span>Mumbai, Maharashtra, India</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 FACETRA. All rights reserved.
+  </div>
+
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<!-- ================= JS ================= -->
+<script>
+/* MOBILE NAV */
+document.getElementById("navToggle").onclick = () =>
+  document.getElementById("mobileNav").classList.toggle("open");
+
+/* ELEMENTS */
+const grid = document.getElementById("emeraldGrid");
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalMeta = document.getElementById("modalMeta");
+const modalDesc = document.getElementById("modalDesc");
+const waBtn = document.getElementById("waBtn");
+const modalClose = document.getElementById("modalClose");
+
+/* LOAD EMERALDS */
+fetch("../assets/collection/manifest.json", { cache: "no-store" })
+.then(r => r.json())
+.then(data => {
+
+  /* GRID */
+  data.emeralds.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "item-card";
+    card.innerHTML = `
+      <div class="item-thumb">
+        <img src="${item.img}" loading="lazy" alt="${item.title}">
+      </div>
+      <div class="item-title">${item.title}</div>
+      <div class="item-desc">${item.desc}</div>
+    `;
+    card.onclick = () => openModal(item);
+    grid.appendChild(card);
+  });
+
+  /* ITEM LIST SCHEMA */
+  const itemListSchema = {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement": data.emeralds.map((item, i) => ({
+      "@type":"ListItem",
+      "position": i + 1,
+      "name": item.title,
+      "image": item.img,
+      "url": "https://facetra.in/collection/emeralds.html"
+    }))
+  };
+  document.getElementById("itemListSchema").textContent =
+    JSON.stringify(itemListSchema, null, 2);
+});
+
+/* MODAL OPEN */
+function openModal(item){
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+
+  modalImg.src = item.img;
+  modalTitle.textContent = item.title;
+  modalMeta.textContent =
+    `Cut: ${item.cut || "—"} | Color: ${item.color || "Green"} | Origin: ${item.origin || "Natural"}`;
+  modalDesc.textContent = item.longDesc || item.desc || "";
+
+  waBtn.href =
+    `https://wa.me/918055113448?text=` +
+    encodeURIComponent(`Hello FACETRA,\nInterested in:\n${item.title}`);
+
+  /* PRODUCT SCHEMA (DEFERRED) */
+  document.getElementById("productSchema").textContent =
+    JSON.stringify({
+      "@context":"https://schema.org",
+      "@type":"Product",
+      "name": item.title,
+      "image": item.img,
+      "description": modalDesc.textContent,
+      "brand":{"@type":"Brand","name":"FACETRA"},
+      "category":"Natural Emerald",
+      "material":"Beryl (Emerald)"
+    }, null, 2);
+}
+
+/* CLOSE MODAL */
+modalClose.onclick = closeModal;
+modal.onclick = e => { if(e.target === modal) closeModal(); };
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape") closeModal();
+});
+
+function closeModal(){
+  modal.classList.remove("open");
+  document.body.style.overflow = "";
+}
+</script>
+
+</body>
 </html>
