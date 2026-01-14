@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Block internal / non-public paths (optional – safe)
+Disallow: /assets/private/
+Disallow: /drafts/
+
+# Sitemap
 Sitemap: https://facetra.in/sitemap.xml
