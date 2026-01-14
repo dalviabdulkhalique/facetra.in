@@ -51,6 +51,8 @@
       }
     }
   </script>
+  <script type="application/ld+json" id="productSchema"></script>
+
 </head>
 
 <body>
@@ -172,63 +174,9 @@ const mobileNav = document.getElementById("mobileNav");
 if (toggle) toggle.onclick = () => mobileNav.classList.toggle("open");
 
 /* ================= LOAD DIAMONDS ================= */
-fetch("../assets/collection/manifest.json", { cache: "no-store" })
-  .then(res => res.json())
-  .then(data => {
-    const grid = document.getElementById("diamondGrid");
-    if (!grid || !data.diamonds) return;
-
-    data.diamonds.forEach(item => {
-      const card = document.createElement("div");
-      card.className = "item-card";
-
-      card.innerHTML = `
-        <div class="item-thumb">
-          <img src="${item.img}" alt="${item.title}" loading="lazy">
-        </div>
-        <div class="item-title">${item.title}</div>
-        <div class="item-desc">${item.desc || ""}</div>
-      `;
-
-      card.addEventListener("click", () => openModal(item));
-      grid.appendChild(card);
-    });
-  })
-  .catch(err => console.error("Manifest load error:", err));
-
-/* ================= MODAL ================= */
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImg");
-const modalTitle = document.getElementById("modalTitle");
-const modalMeta = document.getElementById("modalMeta");
-const modalDesc = document.getElementById("modalDesc");
-const waBtn = document.getElementById("waBtn");
-const modalClose = document.getElementById("modalClose");
-
-function openModal(item) {
-  modal.classList.add("open");
-
-  modalImg.src = item.img;
-  modalImg.alt = item.title;
-
-  modalTitle.textContent = item.title;
-
-  modalMeta.textContent = `
-    Cut: ${item.cut || "—"} |
-    Shape: ${item.shape || "—"} |
-    Origin: ${item.origin || "Natural"}
-  `;
-
-  modalDesc.textContent = item.longDesc || item.desc || "";
-
-  const msg = encodeURIComponent(
-    `Hello FACETRA,\n\nI am interested in:\n${item.title}\nCut: ${item.cut}\nOrigin: ${item.origin}`
-  );
-  waBtn.href = `https://wa.me/918055113448?text=${msg}`;
-}
-
-modalClose.onclick = () => modal.classList.remove("open");
-modal.onclick = e => { if (e.target === modal) modal.classList.remove("open"); };
+<script src="/assets/js/collection-loader.js"></script>
+<script>
+  loadCollection("diamonds", "diamondGrid");
 </script>
 
 
