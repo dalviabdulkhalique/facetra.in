@@ -371,19 +371,17 @@ function openModal(item) {
 }
 
 /* CLOSE MODAL */
-modalClose.onclick = () => {
+
+/* CLOSE */
+modalClose.onclick=closeModal;
+modal.onclick=e=>{ if(e.target===modal) closeModal(); };
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeModal(); });
+
+function closeModal(){
   modal.classList.remove("open");
-  document.body.style.overflow = "";
-};
-
-modal.onclick = e => {
-  if (e.target === modal) {
-    modal.classList.remove("open");
-    document.body.style.overflow = "";
-  }
-};
+  document.body.style.overflow="";
+}
+  
 </script>
-
-
 </body>
 </html>
