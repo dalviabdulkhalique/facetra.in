@@ -2,29 +2,72 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Natural Sapphire Collection | FACETRA</title>
+<title>FACETRA Sapphires Collection | Certified Natural Sapphires</title>
 
+<!-- SEO -->
+<meta name="description" content="Explore FACETRA’s premium collection of certified natural sapphires including blue, fancy and rare padparadscha sapphires.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA’s premium collection of natural certified sapphires including blue, fancy color and rare collector-grade stones.">
+<link rel="canonical" href="https://facetra.in/collection/sapphires.html">
 
-<link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/sapphires.html">
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="FACETRA Sapphires Collection">
+<meta property="og:description" content="Premium certified natural sapphires curated for collectors and fine jewellery.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://facetra.in/collection/sapphires.html">
+<meta property="og:image" content="https://res.cloudinary.com/facetra/image/upload/q_auto,f_auto/sapphire-blue-cushion-1.png">
 
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- PERFORMANCE: Preload first sapphires -->
+<link rel="preload" as="image" href="https://res.cloudinary.com/facetra/image/upload/q_auto,f_auto/sapphire-blue-cushion-1.png" fetchpriority="high">
+<link rel="preload" as="image" href="https://res.cloudinary.com/facetra/image/upload/q_auto,f_auto/sapphire-padparadscha-oval-1.png" fetchpriority="high">
+
+<!-- FAVICONS -->
+<link rel="icon" href="../assets/collection/Favicon/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/collection/Favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#020805">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- STYLES -->
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../collection.css">
 
-<link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<!-- COLLECTION SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"FACETRA Sapphires Collection",
+  "brand":{"@type":"Brand","name":"FACETRA"}
+}
+</script>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- BREADCRUMB -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://facetra.in/"},
+    {"@type":"ListItem","position":2,"name":"Collection","item":"https://facetra.in/collection.html"},
+    {"@type":"ListItem","position":3,"name":"Sapphires","item":"https://facetra.in/collection/sapphires.html"}
+  ]
+}
+</script>
+
+<script type="application/ld+json" id="itemListSchema"></script>
+<script type="application/ld+json" id="productSchema"></script>
 </head>
 
-<body class="page">
+<body>
 
+<!-- HEADER (unchanged) -->
 <header class="site-header">
   <div class="header-inner">
-
     <div class="brand">
-      <img src="../logo.png">
+      <img src="../logo.png" alt="FACETRA Logo">
       <div>
         <div class="brand-name">FACETRA</div>
         <div class="brand-tag">Gems • Diamonds • Stones</div>
@@ -40,29 +83,52 @@
       <a href="../contact.html">Contact</a>
     </nav>
 
-    <div class="nav-toggle" id="navToggle">
-      <span></span><span></span><span></span>
-    </div>
-
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
   </div>
 </header>
 
 <div class="mobile-nav" id="mobileNav">
   <a href="../index.html">Home</a>
   <a href="../collection.html">Collection</a>
+  <a href="../certification.html">Certification</a>
+  <a href="../why-facetra.html">Why FACETRA</a>
+  <a href="../about.html">About</a>
   <a href="../contact.html">Contact</a>
 </div>
 
-<section class="category-page">
-
-  <div class="category-header">
-    <h2>Sapphire Collection</h2>
-    <p>Certified natural sapphires curated for astrology, fine jewellery and long-term collectors.</p>
+<!-- HERO -->
+<section class="collection-hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Sapphires Collection</h1>
+    <p class="hero-description">
+      Hand-selected certified natural sapphires including blue, fancy and rare padparadscha varieties curated for collectors and fine jewellery.
+    </p>
   </div>
-
-  <div class="items-grid" id="itemsGrid"></div>
-
 </section>
+
+<!-- GRID -->
+<section class="category-page">
+  <div class="items-grid diamonds-grid" id="sapphireGrid"></div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <div class="modal-left"><img id="modalImg" alt=""></div>
+    <div class="modal-right">
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-actions">
+        <a id="waBtn" class="btn-primary" target="_blank">WhatsApp Enquiry</a>
+        <a href="../contact.html" class="btn-ghost">Contact FACETRA</a>
+      </div>
+    </div>
+    <div class="modal-close" id="modalClose">✕</div>
+  </div>
+</div>
+
+
 
   <!-- ================= LUXURY FOOTER ================= -->
 <footer class="lux-footer">
@@ -190,82 +256,81 @@
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-  
-<!-- MODAL -->
-<div class="modal-overlay" id="gemModal">
-  <div class="modal-box">
 
-    <button class="modal-close" id="closeModal">×</button>
 
-    <div class="modal-left">
-      <img id="modalImg">
-    </div>
-
-    <div class="modal-right">
-      <h3 class="modal-title" id="modalTitle"></h3>
-      <div class="modal-meta" id="modalMeta"></div>
-      <div class="modal-desc" id="modalDesc"></div>
-
-      <div class="modal-actions">
-        <a id="whatsappBtn" class="btn-primary" target="_blank">WhatsApp Enquiry</a>
-        <a href="../contact.html" class="btn-ghost">Contact FACETRA</a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
+<!-- JS -->
 <script>
-const toggle=document.getElementById("navToggle");
-const mobileNav=document.getElementById("mobileNav");
-toggle.onclick=()=>mobileNav.classList.toggle("open");
+document.getElementById("navToggle").onclick=()=>mobileNav.classList.toggle("open");
 
-const grid=document.getElementById("itemsGrid");
+const grid = document.getElementById("sapphireGrid");
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalMeta = document.getElementById("modalMeta");
+const modalDesc = document.getElementById("modalDesc");
+const waBtn = document.getElementById("waBtn");
+const modalClose = document.getElementById("modalClose");
 
-fetch("../assets/collection/manifest.json",{cache:"no-cache"})
+/* LOAD SAPPHIRES */
+fetch("../assets/collection/manifest.json",{cache:"no-store"})
 .then(r=>r.json())
 .then(data=>{
-  data.sapphires.forEach(g=>{
+  data.sapphires.forEach((item,i)=>{
     const card=document.createElement("div");
     card.className="item-card";
     card.innerHTML=`
-      <div class="item-thumb"><img src="../${g.img}" loading="lazy"></div>
-      <div class="item-title">${g.title}</div>
-      <div class="item-desc">${g.short}</div>
-    `;
+      <div class="item-thumb"><img src="${item.img}" loading="lazy" alt="${item.title}"></div>
+      <div class="item-title">${item.title}</div>
+      <div class="item-desc">${item.desc}</div>`;
+    card.onclick=()=>openModal(item);
     grid.appendChild(card);
-    card.onclick=()=>openModal(g);
   });
+
+  document.getElementById("itemListSchema").textContent =
+    JSON.stringify({
+      "@context":"https://schema.org",
+      "@type":"ItemList",
+      "itemListElement":data.sapphires.map((i,p)=>({
+        "@type":"ListItem",
+        "position":p+1,
+        "name":i.title,
+        "url":"https://facetra.in/collection/sapphires.html",
+        "image":i.img
+      }))
+    },null,2);
 });
 
-const modal=document.getElementById("gemModal");
-const modalImg=document.getElementById("modalImg");
-const modalTitle=document.getElementById("modalTitle");
-const modalMeta=document.getElementById("modalMeta");
-const modalDesc=document.getElementById("modalDesc");
-const whatsappBtn=document.getElementById("whatsappBtn");
-
-function openModal(g){
-  modalImg.src="../"+g.img;
-  modalTitle.textContent=g.title;
-  modalMeta.innerHTML=`
-    <strong>Cut:</strong> ${g.cut}<br>
-    <strong>Color:</strong> ${g.color}<br>
-    <strong>Origin:</strong> ${g.origin}<br>
-    <strong>Treatment:</strong> ${g.treatment}
-  `;
-  modalDesc.textContent=g.note;
-  const link=window.location.href+"#"+g.slug;
-  const msg=`Hello FACETRA,%0AI am interested in ${g.title}.%0ALink: ${link}`;
-  whatsappBtn.href=`https://wa.me/918055113448?text=${msg}`;
+/* MODAL */
+function openModal(item){
   modal.classList.add("open");
   document.body.style.overflow="hidden";
+  modalImg.src=item.img;
+  modalTitle.textContent=item.title;
+  modalMeta.textContent=`Cut: ${item.cut||"—"} | Color: ${item.color||"—"} | Origin: ${item.origin||"Natural"}`;
+  modalDesc.textContent=item.longDesc||item.desc||"";
+  waBtn.href=`https://wa.me/918055113448?text=${encodeURIComponent("Interested in "+item.title)}`;
+
+  document.getElementById("productSchema").textContent =
+    JSON.stringify({
+      "@context":"https://schema.org",
+      "@type":"Product",
+      "name":item.title,
+      "image":item.img,
+      "description":item.longDesc||item.desc,
+      "brand":{"@type":"Brand","name":"FACETRA"},
+      "category":"Natural Sapphire"
+    },null,2);
 }
 
-document.getElementById("closeModal").onclick=()=>{
+/* CLOSE */
+modalClose.onclick=closeModal;
+modal.onclick=e=>{ if(e.target===modal) closeModal(); };
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeModal(); });
+
+function closeModal(){
   modal.classList.remove("open");
   document.body.style.overflow="";
-};
+}
 </script>
 
 </body>
