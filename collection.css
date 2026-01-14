@@ -429,28 +429,6 @@
 }
 
 
-/* ================= MOBILE HERO FIX ================= */
-@media (max-width: 768px) {
-  .collection-hero {
-    min-height: auto;
-    padding: 90px 18px 60px;
-    text-align: center;
-  }
-
-  .collection-hero .hero-title {
-    font-size: 2rem;
-    line-height: 1.2;
-    margin-bottom: 14px;
-  }
-
-  .collection-hero .hero-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    max-width: 100%;
-    margin: 0 auto;
-    opacity: 0.9;
-  }
-}
 
 /* ================= MODAL MOBILE FIX ================= */
 .modal-overlay {
@@ -504,62 +482,28 @@
   transform: scale(1.08);
 }
 
-/* ================= MOBILE HERO OVERRIDE (FINAL) ================= */
-@media (max-width: 768px) {
-
-  .collection-hero {
-    padding: 80px 16px 56px !important;
-    min-height: auto !important;
-    display: block;
-    text-align: center;
-  }
-
-  .collection-hero > div {
-    max-width: 100%;
-  }
-
-  .hero-title {
-    font-size: 1.9rem !important;
-    line-height: 1.25 !important;
-    margin-bottom: 14px !important;
-    letter-spacing: 0.5px;
-  }
-
-  .hero-description {
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    opacity: 0.9;
-  }
-}
-
-
-
-
-
-
-
-
-/* ============================= */
-/* DIAMONDS PAGE HERO ALIGN FIX */
-/* ============================= */
+/* ================= HERO – COLLECTION & DIAMONDS (FINAL) ================= */
 
 .collection-hero {
+  min-height: 42vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 120px 20px 100px;
+  padding: 120px 20px 90px;
+  background: radial-gradient(circle at top, #142019, #050806 70%);
 }
 
-.collection-hero > div {
-  max-width: 900px;
+.collection-hero .hero-inner {
+  max-width: 920px;
   margin: 0 auto;
 }
 
 .collection-hero .hero-title {
-  font-size: 3.2rem;
+  font-family: Cinzel, serif;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  color: var(--gold2);
+  letter-spacing: 2px;
   line-height: 1.15;
 }
 
@@ -567,20 +511,30 @@
   margin-top: 18px;
   font-size: 1.05rem;
   line-height: 1.8;
-  opacity: 0.9;
+  color: #d0d4d1;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
   .collection-hero {
-    padding: 90px 18px 70px;
+    padding: 90px 18px 60px;
+    min-height: auto;
   }
 
   .collection-hero .hero-title {
-    font-size: 2.1rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
   }
 
   .collection-hero .hero-description {
     font-size: 0.95rem;
+    line-height: 1.6;
   }
 }
+
+
+
+
+
+
+
