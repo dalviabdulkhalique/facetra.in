@@ -427,3 +427,79 @@
 .modal-left img:hover {
   transform: scale(1.06);
 }
+
+
+/* ================= MOBILE HERO FIX ================= */
+@media (max-width: 768px) {
+  .collection-hero {
+    min-height: auto;
+    padding: 90px 18px 60px;
+    text-align: center;
+  }
+
+  .collection-hero .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .collection-hero .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+}
+
+/* ================= MODAL MOBILE FIX ================= */
+.modal-overlay {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-box {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .modal-box {
+    flex-direction: column;
+    width: 92%;
+    max-height: 92vh;
+  }
+
+  .modal-left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-right {
+    padding: 20px;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+  }
+
+  .modal-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+
+/* ================= IMAGE ZOOM ================= */
+.item-thumb img,
+.modal-left img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.item-card:hover img {
+  transform: scale(1.05);
+}
+
+.modal-left img:hover {
+  transform: scale(1.08);
+}
