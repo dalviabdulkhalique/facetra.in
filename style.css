@@ -1444,22 +1444,7 @@ body.page{
   max-width:900px;
 }
 
-/* ===============================
-   HOME HERO — LUXURY POLISH
-================================ */
 
-.hero-title{
-  text-shadow:0 8px 28px rgba(201,162,77,.25);
-}
-
-.hero-description{
-  font-size:15.5px;
-  opacity:.92;
-}
-
-.hero-actions{
-  margin-top:10px;
-}
 
 /* ===============================
    CLICKABLE GEM CARDS (HOME)
