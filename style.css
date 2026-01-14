@@ -1428,3 +1428,18 @@ body.page{
   color:#d4af37;   /* SVG uses currentColor */
   flex-shrink:0;
 }
+
+
+/* ===============================
+   HOME HERO — GAP FIX (FINAL)
+================================ */
+
+.hero-section{
+  min-height:75vh; /* tighter, premium */
+  padding:60px 20px;
+}
+
+.hero-section .hero-inner{
+  padding:0;               /* 🔑 remove extra padding */
+  max-width:900px;
+}
