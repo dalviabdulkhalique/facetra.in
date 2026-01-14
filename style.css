@@ -1462,11 +1462,15 @@ body.page{
 }
 
 /* ===============================
-   CLICKABLE GEM CARDS
+   CLICKABLE GEM CARDS (HOME)
 ================================ */
 
 .gem-link{
   display:block;
+}
+
+.gem-link:focus{
+  outline:none;
 }
 
 .gem-link:hover .gem-card{
