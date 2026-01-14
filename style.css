@@ -1460,3 +1460,16 @@ body.page{
 .hero-actions{
   margin-top:10px;
 }
+
+/* ===============================
+   CLICKABLE GEM CARDS
+================================ */
+
+.gem-link{
+  display:block;
+}
+
+.gem-link:hover .gem-card{
+  transform:translateY(-10px);
+  box-shadow:0 0 30px rgba(201,162,77,.45);
+}
