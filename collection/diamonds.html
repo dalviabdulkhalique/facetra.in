@@ -170,20 +170,58 @@ fetch("../assets/collection/manifest.json",{cache:"no-store"})
 });
 
 /* MODAL */
-function openModal(item){
+function openModal(item) {
   modal.classList.add("open");
-  modalImg.src=item.img;
-  modalTitle.textContent=item.title;
-  modalMeta.textContent=`Cut: ${item.cut} | Shape: ${item.shape} | Origin: ${item.origin}`;
-  modalDesc.textContent=item.longDesc;
+  document.body.style.overflow = "hidden";
 
-  waBtn.href=`https://wa.me/918055113448?text=`+
-    encodeURIComponent(`Hello FACETRA, I am interested in ${item.title}`);
+  modalImg.src = item.img;
+  modalTitle.textContent = item.title;
+  modalMeta.textContent = `Cut: ${item.cut || "—"} | Color: ${item.color || "—"} | Origin: ${item.origin || "Natural"}`;
+  modalDesc.textContent = item.longDesc || item.desc || "";
+
+  const msg = encodeURIComponent(
+    `Hello FACETRA,\nI am interested in:\n${item.title}\nCut: ${item.cut}\nColor: ${item.color}`
+  );
+  waBtn.href = `https://wa.me/918055113448?text=${msg}`;
+
+  /* PRODUCT SCHEMA */
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": item.title,
+    "image": item.img,
+    "description": item.longDesc || item.desc,
+    "brand": {
+      "@type": "Brand",
+      "name": "FACETRA"
+    },
+    "category": "Natural Diamond",
+    "material": "Natural Diamond",
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "Cut", "value": item.cut },
+      { "@type": "PropertyValue", "name": "Color", "value": item.color },
+      { "@type": "PropertyValue", "name": "Origin", "value": item.origin || "Natural" }
+    ]
+  };
+
+  document.getElementById("productSchema").textContent =
+    JSON.stringify(schema, null, 2);
 }
 
-document.getElementById("modalClose").onclick=()=>modal.classList.remove("open");
-modal.onclick=e=>{if(e.target===modal)modal.classList.remove("open")};
+/* CLOSE MODAL */
+modalClose.onclick = () => {
+  modal.classList.remove("open");
+  document.body.style.overflow = "";
+};
+
+modal.onclick = e => {
+  if (e.target === modal) {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+};
 </script>
+
 
 </body>
 </html>
