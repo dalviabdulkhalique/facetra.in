@@ -533,3 +533,54 @@
     opacity: 0.9;
   }
 }
+
+
+
+
+
+
+
+
+/* ============================= */
+/* DIAMONDS PAGE HERO ALIGN FIX */
+/* ============================= */
+
+.collection-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 100px;
+}
+
+.collection-hero > div {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.collection-hero .hero-title {
+  font-size: 3.2rem;
+  line-height: 1.15;
+}
+
+.collection-hero .hero-description {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .collection-hero {
+    padding: 90px 18px 70px;
+  }
+
+  .collection-hero .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .collection-hero .hero-description {
+    font-size: 0.95rem;
+  }
+}
