@@ -1462,3 +1462,13 @@ body.page{
   transform:translateY(-10px);
   box-shadow:0 0 30px rgba(201,162,77,.45);
 }
+
+/*MSME CSS*/
+.msme-trust {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: rgba(212, 175, 55, 0.75); /* soft gold */
+  text-transform: uppercase;
+}
+
