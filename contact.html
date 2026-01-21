@@ -128,7 +128,111 @@
     gtag('js', new Date());
     gtag('config', 'G-E6NP9S6JZM');
   </script>
+<style>
+  /* ================= CONTACT PAGE ================= */
 
+.contact-hero{
+  padding:140px 20px 90px;
+  background:radial-gradient(circle at top,#0f1a16,#050505 70%);
+}
+
+.contact-wrap{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+}
+
+/* LEFT */
+
+.contact-left h1{
+  color:var(--gold2);
+  font-size:clamp(2rem,3vw,2.6rem);
+  margin-bottom:18px;
+}
+
+.contact-left p{
+  color:var(--muted);
+  line-height:1.9;
+  margin-bottom:30px;
+  max-width:480px;
+}
+
+.contact-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#ddd;
+  text-decoration:none;
+  font-size:.95rem;
+}
+
+.contact-item svg{
+  width:20px;
+  height:20px;
+  stroke:var(--gold2);
+  fill:none;
+  stroke-width:1.7;
+}
+
+.contact-item:hover span{
+  color:var(--gold2);
+}
+
+/* RIGHT BUSINESS BOX */
+
+.contact-right{
+  background:linear-gradient(160deg,#0b1512,#050505);
+  border:1px solid rgba(212,175,55,.25);
+  padding:40px 40px 45px;
+  box-shadow:0 25px 80px rgba(0,0,0,.8);
+}
+
+.contact-right h2{
+  color:#fff;
+  margin-bottom:14px;
+  font-size:1.4rem;
+}
+
+.contact-right p{
+  color:#bbb;
+  line-height:1.8;
+  margin-bottom:26px;
+}
+
+.btn-whatsapp{
+  display:inline-block;
+  padding:14px 34px;
+  background:linear-gradient(135deg,#d4af37,#f3d27a);
+  color:#000;
+  text-decoration:none;
+  letter-spacing:.6px;
+  font-weight:600;
+  transition:.3s ease;
+}
+
+.btn-whatsapp:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 40px rgba(212,175,55,.45);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+  .contact-wrap{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+}
+
+</style>
 </head>
 
 
