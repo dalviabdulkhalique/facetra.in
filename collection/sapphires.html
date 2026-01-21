@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+<!-- ================= BASIC SEO ================= -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,16 +15,16 @@
 
 <link rel="canonical" href="https://facetra.in/collection/sapphires.html">
 
-<!-- OPEN GRAPH -->
+<!-- ================= OPEN GRAPH ================= -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="FACETRA Sapphires Collection | Certified Natural Sapphires">
-<meta property="og:description" content="Premium certified natural sapphires curated for collectors and jewelers.">
+<meta property="og:description" content="Premium certified natural sapphires curated for collectors and fine jewellery.">
 <meta property="og:url" content="https://facetra.in/collection/sapphires.html">
 <meta property="og:image" content="https://res.cloudinary.com/facetra/image/upload/q_auto,f_auto/sapphire-blue-1.png">
 
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- FAVICONS -->
+<!-- ================= FAVICONS (SOURCE OF TRUTH) ================= -->
 <link rel="icon" href="../assets/collection/Favicon/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="../assets/collection/Favicon/favicon-48x48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="../assets/collection/Favicon/favicon-96x96.png" sizes="96x96" type="image/png">
@@ -31,12 +32,17 @@
 <link rel="apple-touch-icon" href="../assets/collection/Favicon/apple-touch-icon.png">
 
 <meta name="theme-color" content="#000000">
+<meta name="msapplication-TileImage" content="../assets/collection/Favicon/favicon-192x192.png">
+<meta name="msapplication-TileColor" content="#000000">
 
+<!-- ================= FONTS ================= -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- ================= CSS ================= -->
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../collection.css">
 
-<!-- ORGANIZATION -->
+<!-- ================= ORGANIZATION (ENTITY ROOT) ================= -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -44,34 +50,48 @@
   "@id":"https://facetra.in/#organization",
   "name":"FACETRA",
   "url":"https://facetra.in",
-  "logo":"https://facetra.in/logo.png"
+  "logo":"https://facetra.in/logo.png",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Mumbai",
+    "addressRegion":"Maharashtra",
+    "addressCountry":"IN"
+  }
 }
 </script>
 
-<!-- COLLECTION PAGE -->
+<!-- ================= COLLECTION PAGE ================= -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"CollectionPage",
   "name":"FACETRA Sapphires Collection",
   "url":"https://facetra.in/collection/sapphires.html",
-  "isPartOf":{"@type":"WebSite","url":"https://facetra.in"},
-  "about":{"@type":"Product","name":"Natural Sapphires"}
+  "isPartOf":{
+    "@type":"WebSite",
+    "url":"https://facetra.in"
+  },
+  "about":{
+    "@type":"Product",
+    "name":"Natural Sapphires"
+  }
 }
 </script>
 
-<!-- IMAGE OBJECT -->
+<!-- ================= IMAGE OBJECT ================= -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"ImageObject",
   "contentUrl":"https://res.cloudinary.com/facetra/image/upload/q_auto,f_auto/sapphire-blue-1.png",
   "caption":"Certified Natural Blue Sapphire",
-  "creator":{"@id":"https://facetra.in/#organization"}
+  "creator":{
+    "@id":"https://facetra.in/#organization"
+  }
 }
 </script>
 
-<!-- ITEM LIST -->
+<!-- ================= ITEM LIST ================= -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -88,7 +108,7 @@
 }
 </script>
 
-<!-- FAQ -->
+<!-- ================= FAQ ================= -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -96,22 +116,28 @@
   "mainEntity":[{
     "@type":"Question",
     "name":"Are FACETRA sapphires natural?",
-    "acceptedAnswer":{"@type":"Answer","text":"FACETRA deals exclusively in natural sapphires. Treatments, if any, are transparently disclosed."}
+    "acceptedAnswer":{
+      "@type":"Answer",
+      "text":"FACETRA deals exclusively in natural sapphires. Any treatments, if present, are fully disclosed."
+    }
   },{
     "@type":"Question",
-    "name":"Are sapphire certifications available?",
-    "acceptedAnswer":{"@type":"Answer","text":"Independent laboratory certification is available on request based on client requirements."}
+    "name":"Is sapphire certification available?",
+    "acceptedAnswer":{
+      "@type":"Answer",
+      "text":"Independent laboratory certification is available on request based on client and market requirements."
+    }
   }]
 }
 </script>
 
-<!-- GA4 -->
+<!-- ================= GOOGLE ANALYTICS (GA4) ================= -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6NP9S6JZM"></script>
 <script>
-window.dataLayer=window.dataLayer||[];
+window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-E6NP9S6JZM');
+gtag('js', new Date());
+gtag('config', 'G-E6NP9S6JZM');
 </script>
 
 </head>
